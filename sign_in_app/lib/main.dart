@@ -60,7 +60,14 @@ class _SignUpFormState extends State<SignUpForm> {
               controller: _firstNameTextController,
               decoration: InputDecoration(hintText: "First Name"),
             ),
-          )
+          ),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextFormField(
+              controller: _lastNameTextController,
+              decoration: InputDecoration(hintText: 'Last name'),
+            ),
+          ),
           
           ]
           ,
