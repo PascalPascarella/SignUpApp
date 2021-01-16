@@ -42,18 +42,14 @@ class _SignUpFormState extends State<SignUpForm> {
 
   double _formProgress = 0;
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Form(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          LinearProgressIndicator(
-            value: _formProgress),
-          Text("Sign Up", style: Theme
-            .of(context)
-            .textTheme
-            .headline4),
+          LinearProgressIndicator(value: _formProgress),
+          Text("Sign Up", style: Theme.of(context).textTheme.headline4),
           Padding(
             padding: EdgeInsets.all(8.0),
             child: TextFormField(
@@ -77,14 +73,24 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           TextButton(
             style: ButtonStyle(
-              foregroundColor: MaterialStateColor.resolveWith((Set<MaterialState>states) {
+              foregroundColor:
+                  MaterialStateColor.resolveWith((Set<MaterialState> states) {
                 return states.contains(MaterialState.disabled)
-                ? null: Colors.blue;
+                    ? null
+                    : Colors.white;
+              }),
+              backgroundColor:
+                  MaterialStateColor.resolveWith((Set<MaterialState> states) {
+                return states.contains(MaterialState.disabled)
+                    ? null
+                    : Colors.blue;
               }),
             ),
-              onPressed: null,
-              child:  Text("Sign Up"),
+            onPressed: null,
+            child: Text('Sign up'),
+          ),
         ],
-      ),);
+      ),
+    );
   }
 }
