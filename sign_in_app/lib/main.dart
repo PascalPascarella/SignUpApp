@@ -34,3 +34,9 @@ class SignUpForm extends StatefulWidget {
   @override
   _SignUpFormState createState() => _SignUpFormState();
 }
+
+class _SignUpFormState extends State<SignUpForm> {
+  final _firstNameTextController = TextEditingController();
+  final _lastNameTextController = TextEditingController();
+  final _usernameTextController = TextEditingController();
+}
