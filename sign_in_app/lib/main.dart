@@ -12,6 +12,7 @@ class SignUpApp extends StatelessWidget {
     );
   }
 }
+
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,12 @@ class SignUpScreen extends StatelessWidget {
             child: SignUpForm(),
           ),
         ),
-      )
-    )
+      ),
+    );
   }
+}
+
+class SignUpForm extends StatefulWidget {
+  @override
+  _SignUpFormState createState() => _SignUpFormState();
 }
