@@ -75,9 +75,16 @@ class _SignUpFormState extends State<SignUpForm> {
               decoration: InputDecoration(hintText: 'Username'),
             ),
           ),
-          ]
-          ,
-          )
-          )
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateColor.resolveWith((Set<MaterialState>states) {
+                return states.contains(MaterialState.disabled)
+                ? null: Colors.blue;
+              }),
+            ),
+              onPressed: null,
+              child:  Text("Sign Up"),
+        ],
+      ),);
   }
 }
